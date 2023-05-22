@@ -1,0 +1,174 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+/**************************/
+/* 0. Variáveis
+/* 1. Estilos Gerais
+/* 2. Navbar
+/* 3. Hero
+/* 4. Sobre Nós
+/* 5. Diferenciais
+/* 6. Pacotes
+/* 7. Newsletter
+/* 8. Galeria
+/* 9. Footer
+/* 10. Modal
+/***************************/
+
+/***************************/
+/* 0. Variáveis
+/*espesividade maior*/
+:root {
+     --primary: "Cairo" , sans-serif;
+
+     --cor-backgroud: #eeffef;
+     --cor-backgroud2: #064900ab;
+     --cor-white: #015f20;
+     --cor-black: #000000;
+     --cor-light-grren: #def8af;
+     --cor-medium-green: #5cf802;
+     --cor-dark-green: #507e02;
+
+     --spacing: 0.25rem;
+     --transition: all 0.2s linear;
+     --dark-shodow: 0.5rem rgba(0, 0, 0, 0.479);
+}
+/***************************/
+/* 1. Estilos Gerais
+/***************************/
+
+/*
+    1 rem => 16px;
+    12px => 1rem
+    19px => 1rem
+
+    padding: 24px
+*/
+
+html {
+    font-size: 62.5% ;
+}
+
+body {
+
+    font-family: var(--primary) ;
+    background: var(--cor-backgroud);
+}
+a{
+    text-decoration: none;
+}
+
+
+
+/***************************/
+/* 2. Navbar
+/***************************/
+
+.navbar {
+    position: fixed;
+    background: var(--cor-backgroud2);
+    width: 100%;
+    padding: 1.6rem;
+  box-shadow: var(--dark-shodow);
+
+}
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-header__toggLe {
+    
+    background: transparent;
+    border: transparent;
+    font-size:  3.2rem;
+    color: var(--cor-medium-green);
+    cursor: pointer;
+    transition: var(--transition);
+
+}
+ 
+.navbar-header__taggLe:hover {
+    transform: scale(1.2);
+}
+
+.navbar-List {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.navbar-List--show-links{
+    height: 25rem;
+
+}
+.navbar-List__Link {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 1.6rem;
+    text-transform: capitalize;
+    color: var(--cor-black);
+    transition:var(--transition);
+
+}
+
+
+.navbar-List__Link:hover {
+    background: var(--cor-medium-green);
+    padding-left: 3.6rem;
+
+}
+
+.navbar-Icons {
+    display: none;
+    width: 1px;
+   
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-header__toggLe {
+        display: none;
+    }
+    .navbar-List {
+        height: auto;
+        display: flex;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .8rem 1.6rem;
+    }
+
+    .navbar-List__Link:hover {
+         background: none;
+         padding-left: 1.6rem;
+        color: var(--cor-medium-green);
+    }
+
+    .navbar-Icons {
+        display: flex;
+        margin: 0;
+
+    }
+    .navbar-Icons__Icons{
+        margin-right: 1.6rem;
+        color: var(--cor-black);
+        font-size: 1.8rem;
+        font-weight: 900;
+        transition: var(--transition);
+
+    }
+    .navbar-Icons__Icons:hover {
+        color: var(--cor-medium-green);
+    }
+
+}
+/***************************/
+
+/***************************/
